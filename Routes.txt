@@ -1,0 +1,10 @@
+GET /quotes/random ✅
+GET /quotes/{id} ✅
+GET /quotes/category/{category} ✅
+GET /quotes/author/{author} ✅
+GET /quotes/popularity/{score} ✅
+GET /quotes/tag/{tag} ✅
+GET /quotes/language/{language} ✅
+GET /quotes/date/{date} ✅
+GET /quotes/date-range?start={start_date}&end={end_date} ✅
+GET /quotes?limit={number}  ✅

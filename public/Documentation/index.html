@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="../main/index.html">Home</a>
+      <a href="../Documentation/index.html">Documentation</a>
+      <a href="../API_Testing/index.html">Try API</a>
+    </div>
+  </nav>
+    <section id="documentation" class="section">
+        <div class="container">
+            <h2>API Documentation</h2>
+            
+            <div class="card">
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <h3>/quotes/random</h3>
+                    <span class="copy-icon" onclick="copyToClipboard('/quotes/random', this)">📋</span>
+                    
+                </div>
+                <p>Returns a random quote from the database.</p>
+                <h4>Parameters</h4>
+                <div class="code-block">
+                    <code>
+None
+                    </code>
+                </div>
+                <h4>Example Response</h4>
+                <div class="code-block">
+                    <code>
+{
+  "id": "1",
+  "content": "The only limit to our realization of tomorrow is our doubts of today.",
+  "author": "Franklin D. Roosevelt",
+  "tags": ["inspiration", "motivation"]
+}
+                    </code>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <h3>/quotes/category/{category}</h3>
+                    <span class="copy-icon" onclick="copyToClipboard('/quotes/category/{category}', this)">📋</span>
+                    
+                </div>
+                <p>Returns a list of quotes from a specific category.</p>
+                <h4>Parameters</h4>
+                <div class="code-block">
+                    <code>
+{
+  "category": {
+    "type": "string",
+    "description": "Category to filter quotes",
+    "enum": ["inspiration", "motivation", "wisdom"],
+    "required": true
+  }
+}
+                    </code>
+                </div>
+                <h4>Example Response</h4>
+                <div class="code-block">
+                    <code>
+[
+  {
+    "id": "1",
+    "content": "The only limit to our realization of tomorrow is our doubts of today.",
+    "author": "Franklin D. Roosevelt",
+    "tags": ["inspiration"]
+  },
+  {
+    "id": "2",
+    "content": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    "author": "Winston S. Churchill",
+    "tags": ["motivation"]
+  }
+]
+                    </code>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <h3>/quotes/author/{author}</h3>
+                    <span class="copy-icon" onclick="copyToClipboard('/quotes/author/{author}', this)">📋</span>
+                    
+                </div>
+                <p>Returns a list of quotes from a specific author.</p>
+                <h4>Parameters</h4>
+                <div class="code-block">
+                    <code>
+{
+  "author": {
+    "type": "string",
+    "description": "Name of the author to filter quotes",
+    "required": true
+  }
+}
+                    </code>
+                </div>
+                <h4>Example Response</h4>
+                <div class="code-block">
+                    <code>
+[
+  {
+    "id": "1",
+    "content": "Be yourself; everyone else is already taken.",
+    "tags": ["humor"]
+  }
+]
+                    </code>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <h3>/quotes/popularity/{score}</h3>
+                    <span class="copy-icon" onclick="copyToClipboard('/quotes/popularity/{score}', this)">📋</span>
+                    
+                </div>
+                <p>Returns quotes with a specific popularity score.</p>
+                <h4>Parameters</h4>
+                <div class="code-block">
+                    <code>
+{
+  "score": {
+    "type": "integer",
+    "description": "Popularity score to filter quotes",
+    "required": true
+  }
+}
+                    </code>
+                </div>
+                <h4>Example Response</h4>
+                <div class="code-block">
+                    <code>
+[
+  {
+    "id": "1",
+    "content": "Life is what happens when you're busy making other plans.",
+    "author": "John Lennon",
+    "tags": ["life", "philosophy"]
+  }
+]
+                    </code>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <h3>/quotes/tag/{tag}</h3>
+                    <span class="copy-icon" onclick="copyToClipboard('/quotes/tag/{tag}', this)">📋</span>
+                    
+                </div>
+                <p>Returns a list of quotes with a specific tag.</p>
+                <h4>Parameters</h4>
+                <div class="code-block">
+                    <code>
+{
+  "tag": {
+    "type": "string",
+    "description": "Tag to filter quotes",
+    "required": true
+  }
+}
+                    </code>
+                </div>
+                <h4>Example Response</h4>
+                <div class="code-block">
+                    <code>
+[
+  {
+    "id": "1",
+    "content": "The best way to predict the future is to create it.",
+    "author": "Peter Drucker",
+    "tags": ["future", "inspiration"]
+  }
+]
+                    </code>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <h3>/quotes/language/{language}</h3>
+                    <span class="copy-icon" onclick="copyToClipboard('/quotes/language/{language}', this)">📋</span>
+                    
+                </div>
+                <p>Returns quotes in a specified language.</p>
+                <h4>Parameters</h4>
+                <div class="code-block">
+                    <code>
+{
+  "language": {
+    "type": "string",
+    "description": "Language code to filter quotes",
+    "required": true
+  }
+}
+                    </code>
+                </div>
+                <h4>Example Response</h4>
+                <div class="code-block">
+                    <code>
+[
+  {
+    "id": "1",
+    "content": "La vida es lo que sucede mientras estás ocupado haciendo otros planes.",
+    "author": "John Lennon",
+    "tags": ["vida", "filosofía"]
+  }
+]
+                    </code>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <h3>/quotes/date/{date}</h3>
+                    <span class="copy-icon" onclick="copyToClipboard('/quotes/date/{date}', this)">📋</span>
+                    
+                </div>
+                <p>Returns quotes from a specific date.</p>
+                <h4>Parameters</h4>
+                <div class="code-block">
+                    <code>
+{
+  "date": {
+    "type": "string",
+    "description": "Date in YYYY-MM-DD format to filter quotes",
+    "required": true
+  }
+}
+                    </code>
+                </div>
+                <h4>Example Response</h4>
+                <div class="code-block">
+                    <code>
+[
+  {
+    "id": "1",
+    "content": "The future belongs to those who believe in the beauty of their dreams.",
+    "author": "Eleanor Roosevelt",
+    "tags": ["future", "dreams"]
+  }
+]
+                    </code>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="endpoint">
+                    <span class="method get">GET</span>
+                    <h3>/quotes/date-range</h3>
+                    <span class="copy-icon" onclick="copyToClipboard('/quotes/date-range', this)">📋</span>
+                    
+                </div>
+                <p>Returns quotes within a specified date range.</p>
+                <h4>Parameters</h4>
+                <div class="code-block">
+                    <code>
+{
+  "start_date": {
+    "type": "string",
+    "description": "Start date in YYYY-MM-DD format",
+    "required": true
+  },
+  "end_date": {
+    "type": "string",
+    "description": "End date in YYYY-MM-DD format",
+    "required": true
+  }
+}
+                    </code>
+                </div>
+                <h4>Example Response</h4>
+                <div class="code-block">
+                    <code>
+[
+  {
+    "id": "1",
+    "content": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+    "author": "Buddha",
+    "tags": ["present", "mindfulness"]
+  }
+]
+                    </code>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

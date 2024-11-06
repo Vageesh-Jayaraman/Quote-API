@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Testing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../main/index.html">Home</a>
+            <a href="../Documentation/index.html">Documentation</a>
+            <a href="../API_Testing/index.html">Try API</a>
+        </div>
+      </nav>
+    <div class="container">
+        <h2>Test the API</h2>
+        <section id="try" class="section">
+            <div class="card">
+                <label for="methodSelect">Select API Method:</label>
+                <select id="methodSelect" class="btn">
+                    <option value="">Select Method</option>
+                    <option value="/quotes/random">GET /quotes/random</option>
+                    <option value="/quotes/{id}">GET /quotes/{id}</option>
+                    <option value="/quotes/category/{category}">GET /quotes/category/{category}</option>
+                    <option value="/quotes/author/{author}">GET /quotes/author/{author}</option>
+                    <option value="/quotes/popularity/{score}">GET /quotes/popularity/{score}</option>
+                    <option value="/quotes/tag/{tag}">GET /quotes/tag/{tag}</option>
+                    <option value="/quotes/language/{language}">GET /quotes/language/{language}</option>
+                    <option value="/quotes/date/{date}">GET /quotes/date/{date}</option>
+                    <option value="/quotes/date-range">GET /quotes/date-range</option>
+                    <option value="/quotes">GET /quotes?limit={number}</option>
+                </select>
+                
+                <div id="parameterInputs"></div>
+
+                <button id="testButton" class="btn">Test API</button>
+                <div id="apiResult" class="code-block">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

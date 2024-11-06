@@ -1,0 +1,200 @@
+:root {
+    --primary: #32CD32;
+    --primary-hover: #50E050;
+    --background: #0A0A0A;
+    --text: #E0E0E0;
+    --card-bg: #141414;
+    --border: #2A2A2A;
+    --code-bg: #1A1A1A;
+    --method-get: #32CD32;
+    --gradient-glow: linear-gradient(135deg, rgba(50, 205, 50, 0.4) 0%, rgba(50, 205, 50, 0) 50%);
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(50, 205, 50, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(50, 205, 50, 0.4); }
+    100% { box-shadow: 0 0 5px rgba(50, 205, 50, 0.2); }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.25rem;
+    background: rgba(10, 10, 10, 0.8);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+  }
+  
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    letter-spacing: -0.02em;
+  }
+
+  .section {
+    padding: 6rem 0;
+    border-bottom: 1px solid var(--border);
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 2rem; 
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeIn 0.6s ease-out;
+    width: auto; 
+    min-width: 300px;
+}
+  
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    animation: glow 2s ease-in-out infinite;
+  }
+  
+
+.endpoint {
+    display: flex;
+    align-items: center;
+}
+
+.endpoint .method {
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.endpoint {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .method {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.05em;
+  }
+  
+  .method.get {
+    background-color: rgba(175, 243, 175, 0.15);
+    color: var(--method-get);
+  }
+  
+h3 {
+    margin: 0;
+}
+
+.code-block {
+    background-color: #272822;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: monospace;
+}
+
+.code-block code {
+    display: block;
+    white-space: pre;
+}
+
+p {
+    color: rgb(218, 240, 77);
+}
+
+h4 {
+    margin-top: 15px;
+    color: #f0ebeb;
+}
+
+.copy-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    color: #007BFF;
+    font-size: 1.2em;
+}
+
+.copy-icon.copied {
+    color: #28a745;
+}

@@ -1,0 +1,113 @@
+[
+    {
+      "id": "1",
+      "quote_text": "The journey of a thousand miles begins with a single step.",
+      "author": "Lao Tzu",
+      "category": "inspiration",
+      "language": "en",
+      "date_added": "2024-01-15T10:30:00Z",
+      "popularity_score": 95,
+      "tags": ["journey", "motivation","plans"],
+      "source": "Ancient Chinese Philosophy"
+    },
+    {
+      "id": "2",
+      "quote_text": "Life is what happens when you're busy making other plans.",
+      "author": "John Lennon",
+      "category": "life",
+      "language": "en",
+      "date_added": "2024-01-20T08:45:00Z",
+      "popularity_score": 88,
+      "tags": ["life", "plans"],
+      "source": "Interview, 1980"
+    },
+    {
+      "id": "3",
+      "quote_text": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+      "author": "Buddha",
+      "category": "mindfulness",
+      "language": "en",
+      "date_added": "2024-01-22T14:00:00Z",
+      "popularity_score": 92,
+      "tags": ["present", "mindfulness"],
+      "source": "Dhammapada"
+    },
+    {
+      "id": "4",
+      "quote_text": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+      "author": "Ralph Waldo Emerson",
+      "category": "individuality",
+      "language": "en",
+      "date_added": "2024-02-01T11:25:00Z",
+      "popularity_score": 87,
+      "tags": ["self", "society"],
+      "source": "Essays, First Series"
+    },
+    {
+      "id": "5",
+      "quote_text": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+      "author": "Winston Churchill",
+      "category": "motivation",
+      "language": "en",
+      "date_added": "2024-02-05T13:10:00Z",
+      "popularity_score": 93,
+      "tags": ["success", "courage"],
+      "source": "Speech, 1941"
+    },
+    {
+      "id": "6",
+      "quote_text": "Happiness is not something ready-made. It comes from your own actions.",
+      "author": "Dalai Lama",
+      "category": "happiness",
+      "language": "en",
+      "date_added": "2024-02-07T15:30:00Z",
+      "popularity_score": 90,
+      "tags": ["happiness", "self"],
+      "source": "The Art of Happiness"
+    },
+    {
+      "id": "7",
+      "quote_text": "It does not matter how slowly you go as long as you do not stop.",
+      "author": "Confucius",
+      "category": "perseverance",
+      "language": "en",
+      "date_added": "2024-02-10T09:00:00Z",
+      "popularity_score": 89,
+      "tags": ["perseverance", "progress"],
+      "source": "Analects of Confucius"
+    },
+    {
+      "id": "8",
+      "quote_text": "The best way to predict the future is to invent it.",
+      "author": "Alan Kay",
+      "category": "innovation",
+      "language": "en",
+      "date_added": "2024-02-12T16:00:00Z",
+      "popularity_score": 85,
+      "tags": ["future", "innovation"],
+      "source": "Speech, 1971"
+    },
+    {
+      "id": "9",
+      "quote_text": "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+      "author": "Martin Luther King Jr.",
+      "category": "friendship",
+      "language": "en",
+      "date_added": "2024-02-14T10:45:00Z",
+      "popularity_score": 91,
+      "tags": ["friendship", "justice"],
+      "source": "Letter from Birmingham Jail"
+    },
+    {
+      "id": "10",
+      "quote_text": "The only limit to our realization of tomorrow is our doubts of today.",
+      "author": "Franklin D. Roosevelt",
+      "category": "hope",
+      "language": "en",
+      "date_added": "2024-02-18T12:00:00Z",
+      "popularity_score": 86,
+      "tags": ["hope", "future"],
+      "source": "Speech, 1945"
+    }
+  ]
+  
