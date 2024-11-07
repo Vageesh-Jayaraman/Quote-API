@@ -4,8 +4,8 @@ const path = require("path");
 const mongoose = require("mongoose");
 
 const app = express();
-const Data = require("./models/data")
-const generateQuotes = require('./gen-ai/addQuotes');
+const Data = require("../models/data")
+const generateQuotes = require('../gen-ai/addQuotes');
 
 const PORT = process.env.PORT || 3000;
 const dbURI = process.env.dbURI;
