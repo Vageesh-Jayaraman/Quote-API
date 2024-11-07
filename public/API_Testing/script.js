@@ -61,7 +61,7 @@ document.getElementById('testButton').addEventListener('click', function() {
         method = method.replace(`{${param}}`, params[param]);
     });
 
-    let url = `http://localhost:3000${method}`;
+    let url = `${window.location.origin}${method}`;
 
     if (method === '/quotes/date-range') {
         const query = new URLSearchParams({

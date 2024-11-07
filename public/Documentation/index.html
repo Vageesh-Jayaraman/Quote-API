@@ -4,42 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Documentation</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-links">
-      <a href="../main/index.html">Home</a>
-      <a href="../Documentation/index.html">Documentation</a>
-      <a href="../API_Testing/index.html">Try API</a>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="../main/index.html">Home</a>
+            <a href="../Documentation/index.html">Documentation</a>
+            <a href="../API_Testing/index.html">Try API</a>
+        </div>
+    </nav>
     <section id="documentation" class="section">
         <div class="container">
             <h2>API Documentation</h2>
-            
+
             <div class="card">
                 <div class="endpoint">
                     <span class="method get">GET</span>
                     <h3>/quotes/random</h3>
                     <span class="copy-icon" onclick="copyToClipboard('/quotes/random', this)">📋</span>
-                    
                 </div>
                 <p>Returns a random quote from the database.</p>
                 <h4>Parameters</h4>
                 <div class="code-block">
-                    <code>
-None
-                    </code>
+                    <code>None</code>
                 </div>
                 <h4>Example Response</h4>
                 <div class="code-block">
                     <code>
 {
   "id": "1",
-  "content": "The only limit to our realization of tomorrow is our doubts of today.",
+  "quote_text": "The only limit to our realization of tomorrow is our doubts of today.",
   "author": "Franklin D. Roosevelt",
-  "tags": ["inspiration", "motivation"]
+  "category": "inspiration",
+  "language": "en",
+  "date_added": "2024-01-15T10:30:00Z",
+  "popularity_score": 85,
+  "tags": ["inspiration", "motivation"],
+  "source": "Franklin D. Roosevelt's speech"
 }
                     </code>
                 </div>
@@ -50,7 +52,6 @@ None
                     <span class="method get">GET</span>
                     <h3>/quotes/category/{category}</h3>
                     <span class="copy-icon" onclick="copyToClipboard('/quotes/category/{category}', this)">📋</span>
-                    
                 </div>
                 <p>Returns a list of quotes from a specific category.</p>
                 <h4>Parameters</h4>
@@ -72,15 +73,25 @@ None
 [
   {
     "id": "1",
-    "content": "The only limit to our realization of tomorrow is our doubts of today.",
+    "quote_text": "The only limit to our realization of tomorrow is our doubts of today.",
     "author": "Franklin D. Roosevelt",
-    "tags": ["inspiration"]
+    "category": "inspiration",
+    "language": "en",
+    "date_added": "2024-01-15T10:30:00Z",
+    "popularity_score": 85,
+    "tags": ["inspiration"],
+    "source": "Franklin D. Roosevelt's speech"
   },
   {
     "id": "2",
-    "content": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    "quote_text": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
     "author": "Winston S. Churchill",
-    "tags": ["motivation"]
+    "category": "motivation",
+    "language": "en",
+    "date_added": "2024-01-20T11:00:00Z",
+    "popularity_score": 90,
+    "tags": ["motivation"],
+    "source": "Winston Churchill's speeches"
   }
 ]
                     </code>
@@ -92,7 +103,6 @@ None
                     <span class="method get">GET</span>
                     <h3>/quotes/author/{author}</h3>
                     <span class="copy-icon" onclick="copyToClipboard('/quotes/author/{author}', this)">📋</span>
-                    
                 </div>
                 <p>Returns a list of quotes from a specific author.</p>
                 <h4>Parameters</h4>
@@ -113,8 +123,14 @@ None
 [
   {
     "id": "1",
-    "content": "Be yourself; everyone else is already taken.",
-    "tags": ["humor"]
+    "quote_text": "Be yourself; everyone else is already taken.",
+    "author": "Oscar Wilde",
+    "category": "humor",
+    "language": "en",
+    "date_added": "2024-01-25T12:00:00Z",
+    "popularity_score": 88,
+    "tags": ["humor"],
+    "source": "Oscar Wilde's works"
   }
 ]
                     </code>
@@ -126,7 +142,6 @@ None
                     <span class="method get">GET</span>
                     <h3>/quotes/popularity/{score}</h3>
                     <span class="copy-icon" onclick="copyToClipboard('/quotes/popularity/{score}', this)">📋</span>
-                    
                 </div>
                 <p>Returns quotes with a specific popularity score.</p>
                 <h4>Parameters</h4>
@@ -147,9 +162,14 @@ None
 [
   {
     "id": "1",
-    "content": "Life is what happens when you're busy making other plans.",
+    "quote_text": "Life is what happens when you're busy making other plans.",
     "author": "John Lennon",
-    "tags": ["life", "philosophy"]
+    "category": "life",
+    "language": "en",
+    "date_added": "2024-01-28T09:00:00Z",
+    "popularity_score": 78,
+    "tags": ["life", "philosophy"],
+    "source": "John Lennon's quotes"
   }
 ]
                     </code>
@@ -161,7 +181,6 @@ None
                     <span class="method get">GET</span>
                     <h3>/quotes/tag/{tag}</h3>
                     <span class="copy-icon" onclick="copyToClipboard('/quotes/tag/{tag}', this)">📋</span>
-                    
                 </div>
                 <p>Returns a list of quotes with a specific tag.</p>
                 <h4>Parameters</h4>
@@ -182,9 +201,14 @@ None
 [
   {
     "id": "1",
-    "content": "The best way to predict the future is to create it.",
+    "quote_text": "The best way to predict the future is to create it.",
     "author": "Peter Drucker",
-    "tags": ["future", "inspiration"]
+    "category": "future",
+    "language": "en",
+    "date_added": "2024-02-02T15:45:00Z",
+    "popularity_score": 92,
+    "tags": ["future", "inspiration"],
+    "source": "Peter Drucker's speeches"
   }
 ]
                     </code>
@@ -196,7 +220,6 @@ None
                     <span class="method get">GET</span>
                     <h3>/quotes/language/{language}</h3>
                     <span class="copy-icon" onclick="copyToClipboard('/quotes/language/{language}', this)">📋</span>
-                    
                 </div>
                 <p>Returns quotes in a specified language.</p>
                 <h4>Parameters</h4>
@@ -217,9 +240,14 @@ None
 [
   {
     "id": "1",
-    "content": "La vida es lo que sucede mientras estás ocupado haciendo otros planes.",
+    "quote_text": "La vida es lo que sucede mientras estás ocupado haciendo otros planes.",
     "author": "John Lennon",
-    "tags": ["vida", "filosofía"]
+    "category": "vida",
+    "language": "es",
+    "date_added": "2024-01-28T09:00:00Z",
+    "popularity_score": 78,
+    "tags": ["vida", "filosofía"],
+    "source": "Frases de John Lennon"
   }
 ]
                     </code>
@@ -231,16 +259,15 @@ None
                     <span class="method get">GET</span>
                     <h3>/quotes/date/{date}</h3>
                     <span class="copy-icon" onclick="copyToClipboard('/quotes/date/{date}', this)">📋</span>
-                    
                 </div>
-                <p>Returns quotes from a specific date.</p>
+                <p>Returns quotes added on a specific date.</p>
                 <h4>Parameters</h4>
                 <div class="code-block">
                     <code>
 {
   "date": {
     "type": "string",
-    "description": "Date in YYYY-MM-DD format to filter quotes",
+    "description": "Date in YYYY-MM-DD format",
     "required": true
   }
 }
@@ -252,9 +279,14 @@ None
 [
   {
     "id": "1",
-    "content": "The future belongs to those who believe in the beauty of their dreams.",
+    "quote_text": "To handle yourself, use your head; to handle others, use your heart.",
     "author": "Eleanor Roosevelt",
-    "tags": ["future", "dreams"]
+    "category": "leadership",
+    "language": "en",
+    "date_added": "2024-02-05T08:00:00Z",
+    "popularity_score": 95,
+    "tags": ["leadership", "wisdom"],
+    "source": "Eleanor Roosevelt's speeches"
   }
 ]
                     </code>
@@ -262,47 +294,38 @@ None
             </div>
 
             <div class="card">
-                <div class="endpoint">
-                    <span class="method get">GET</span>
-                    <h3>/quotes/date-range</h3>
-                    <span class="copy-icon" onclick="copyToClipboard('/quotes/date-range', this)">📋</span>
-                    
-                </div>
-                <p>Returns quotes within a specified date range.</p>
-                <h4>Parameters</h4>
-                <div class="code-block">
-                    <code>
+              <div class="endpoint">
+                  <span class="method get">GET</span>
+                  <h3>/quotes/generate</h3>
+                  <span class="copy-icon" onclick="copyToClipboard('/quotes/date/{date}', this)">📋</span>
+              </div>
+              <p>Generates a new quote using <strong>Gemini API</strong></p>
+              <h4>Parameters</h4>
+              <div class="code-block">
+                  <code>
+None
+                  </code>
+              </div>
+              <h4>Example Response</h4>
+              <div class="code-block">
+                  <code>
 {
-  "start_date": {
-    "type": "string",
-    "description": "Start date in YYYY-MM-DD format",
-    "required": true
-  },
-  "end_date": {
-    "type": "string",
-    "description": "End date in YYYY-MM-DD format",
-    "required": true
-  }
+  "id": "1",
+  "quote_text": "The only person you are destined to become is the person you decide to be.",
+    "author": "Ralph Waldo Emerson",
+    "category": "inspiration",
+    "language": "en",
+    "date_added": "2024-11-09T14:37:00Z",
+    "popularity_score": 89,
+    "tags": ["destiny", "choice", "potential"],
+    "source": "Self-Reliance"
 }
-                    </code>
-                </div>
-                <h4>Example Response</h4>
-                <div class="code-block">
-                    <code>
-[
-  {
-    "id": "1",
-    "content": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
-    "author": "Buddha",
-    "tags": ["present", "mindfulness"]
-  }
-]
-                    </code>
-                </div>
-            </div>
+                  </code>
+              </div>
+          </div>
+
         </div>
     </section>
-
     <script src="script.js"></script>
 </body>
 </html>

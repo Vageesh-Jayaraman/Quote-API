@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quote API - Developer Portal</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Quote API</title>
+    <link rel="stylesheet" href="/main/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
     <main>
       <section id="home" class="hero">
         <div class="container">
-          <h1>Quote Generation API</h1>
+          <h1>Quote API</h1>
           <p>Effortlessly generate quotes via our public, no-sign-in API. Perfect for developers needing inspirational, humorous, or motivational content.</p>
           <a href="../Documentation/index.html" class="btn">Get Started</a>
         </div>
@@ -47,9 +47,51 @@
           </div>
         </div>
       </section>
-    </main>
 
-    
+      <section class="section">
+        <div class="container">
+          <h2>Available API Routes</h2>
+          <p>Discover the full range of routes available in our API:</p>
+          <div class="quote-grid">
+            <div class="quote-card route-card">
+              <p class="route-text"><span class="highlight">GET</span> /quotes/random</p>
+            </div>
+            <div class="quote-card route-card">
+              <p class="route-text"><span class="highlight">GET</span> /quotes/{id}</p>
+            </div>
+            <div class="quote-card route-card">
+              <p class="route-text"><span class="highlight">GET</span> /quotes/category/{category}</p>
+            </div>
+            <div class="quote-card route-card">
+              <p class="route-text"><span class="highlight">GET</span> /quotes/author/{author}</p>
+            </div>
+            <div class="quote-card route-card">
+              <p class="route-text"><span class="highlight">GET</span> /quotes/popularity/{score}</p>
+            </div>
+            <div class="quote-card route-card">
+              <p class="route-text"><span class="highlight">GET</span> /quotes/tag/{tag}</p>
+            </div>
+            <div class="quote-card route-card">
+              <p class="route-text"><span class="highlight">GET</span> /quotes/language/{language}</p>
+            </div>
+            <div class="quote-card route-card">
+              <p class="route-text"><span class="highlight">GET</span> /quotes/date/{date}</p>
+            </div>
+            <div class="quote-card route-card">
+              <p class="route-text"><span class="highlight">GET</span> /quotes/date-range?start={start_date}&end={end_date}</p>
+            </div>
+            <div class="quote-card route-card">
+              <p class="route-text"><span class="highlight">GET</span> /quotes?limit={number}</p>
+            </div>
+            <div class="quote-card route-card">
+              <img src="/images/gemini.png" alt="Gemini API" class="gemini-image" />
+              <p class="route-text"><span class="highlight">GET</span> /quotes/generate</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
 
     <script type="module" src="./script.js"></script>
   </body>

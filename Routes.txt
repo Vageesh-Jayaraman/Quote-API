@@ -7,4 +7,5 @@ GET /quotes/tag/{tag} ✅
 GET /quotes/language/{language} ✅
 GET /quotes/date/{date} ✅
 GET /quotes/date-range?start={start_date}&end={end_date} ✅
-GET /quotes?limit={number}  ✅
+GET /quotes?limit={number}  ✅ 
+GET /quotes/generate  ✅ - Generates a quote using Gemini API

@@ -198,3 +198,8 @@ h4 {
 .copy-icon.copied {
     color: #28a745;
 }
+
+.copy-icon {
+  position: relative;
+  cursor: pointer;
+}
