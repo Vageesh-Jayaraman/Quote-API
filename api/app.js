@@ -10,7 +10,7 @@ const generateQuotes = require('../gen-ai/addQuotes');
 const PORT = process.env.PORT || 3000;
 const dbURI = process.env.dbURI;
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "../public")));
 
 mongoose.connect(dbURI)
     .then((result) => {
@@ -22,7 +22,7 @@ mongoose.connect(dbURI)
 
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "main", "index.html"));
+    res.sendFile(path.join(__dirname, "../public", "main", "index.html"));
 });
 
 app.get('/quotes/generate', async (req, res) => {
