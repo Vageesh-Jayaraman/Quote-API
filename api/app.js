@@ -166,3 +166,7 @@ app.get("/quotes/date-range", async (req, res) => {
     }
 });
 
+
+module.exports = (req, res) => {
+    app(req, res);  
+};
